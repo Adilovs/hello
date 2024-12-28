@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Болочок технологиялар жана ИИ</title>
+    <style>
+        /* Общие стили для сайта */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Стили для шапки */
+        header {
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Стили для разделов */
+        section {
+            padding: 40px 0;
+            background-color: #fff;
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #2575fc;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        /* Стили для футера */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+        /* Анимация */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h1, h2, p {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            section p {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="header-title">Болочок технологиялар жана ИИ</h1>
+            <p id="header-description">Технологиялар жана жасалма интеллект боюнча изилдөөлөрдү баштаңыз.</p>
+            <!-- Кнопка для переключения языка -->
+            <button onclick="toggleLanguage()">Переключить язык</button>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div class="container">
+            <h2 id="intro-title">Келечек азыр</h2>
+            <p id="intro-text">Технологиялар жана жасалма интеллект дүйнөнү өзгөртүп жатат. Өзгөчө автомобилдер, робототехника жана машина үйрөнүү боюнча жаңы мүмкүнчүлүктөр ачылууда.</p>
+        </div>
+    </section>
+
+    <section id="ai">
+        <div class="container">
+            <h2 id="ai-title">Жасалма интеллект</h2>
+            <p id="ai-text">Жасалма интеллект дүйнөлүк индустрияларды өзгөртүп жатат. Нейрондук тармактар, робототехника жана маалыматты талдоо боюнча жаңылыктар менен келечек кубаттуу болуп жатат.</p>
+        </div>
+    </section>
+
+    <section id="tech">
+        <div class="container">
+            <h2 id="tech-title">Келечекти түзгөн технологиялар</h2>
+            <p id="tech-text">Кванттык эсептөө, 5G, блокчейн жана башка жаңы технологиялар санариптик доорду түзүүдө.</p>
+        </div>
+    </section>
+
+    <section id="interactive">
+        <div class="container">
+            <h2 id="interactive-title">ИИ жөнүндө көбүрөөк үйрөнүңүз</h2>
+            <p id="interactive-text" style="display:none;">Жасалма интеллект денсаулықты сактоо, каржы жана башка тармактарда өзгөртүү алып келет. Бул автоматташтыруу жана жакшы чечимдерди кабыл алуу үчүн күчтүү курал.</p>
+            <button onclick="toggleAIText()">Көбүрөөк көрсөтүү</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Болочок технологиялар жана ИИ</p>
+        </div>
+    </footer>
+
+    <script>
+        let isKyrgyz = true;
+
+        function toggleLanguage() {
+            if (isKyrgyz) {
+                document.getElementById('header-title').textContent = 'Будущие технологии и ИИ';
+                document.getElementById('header-description').textContent = 'Изучите будущее технологий и искусственного интеллекта';
+                document.getElementById('intro-title').textContent = 'Будущее уже здесь';
+                document.getElementById('intro-text').textContent = 'Технологии и искусственный интеллект меняют мир, открывая новые возможности в автономных автомобилях, робототехнике и машинном обучении.';
+                document.getElementById('ai-title').textContent = 'Искусственный интеллект';
+                document.getElementById('ai-text').textContent = 'ИИ революционизирует отрасли по всему миру. С инновациями в нейронных сетях, робототехнике и аналитике данных, будущее выглядит ярким.';
+                document.getElementById('tech-title').textContent = 'Технологии, меняющие будущее';
+                document.getElementById('tech-text').textContent = 'Квантовые вычисления, 5G, блокчейн и другие новые технологии прокладывают путь в цифровую эпоху.';
+                document.getElementById('interactive-title').textContent = 'Узнайте больше об ИИ';
+                document.getElementById('interactive-text').textContent = 'ИИ меняет каждый сектор, от здравоохранения до финансов. Это мощный инструмент для автоматизации задач и принятия лучших решений.';
+                isKyrgyz = false;
+            } else {
+                document.getElementById('header-title').textContent = 'Болочок технологиялар жана ИИ';
+                document.getElementById('header-description').textContent = 'Технологиялар жана жасалма интеллект боюнча изилдөөлөрдү баштаңыз.';
+                document.getElementById('intro-title').textContent = 'Келечек азыр';
+                document.getElementById('intro-text').textContent = 'Технологиялар жана жасалма интеллект дүйнөнү өзгөртүп жатат. Өзгөчө автомобилдер, робототехника жана машина үйрөнүү боюнча жаңы мүмкүнчүлүктөр ачылууда.';
+                document.getElementById('ai-title').textContent = 'Жасалма интеллект';
+                document.getElementById('ai-text').textContent = 'Жасалма интеллект дүйнөлүк индустрияларды өзгөртүп жатат. Нейрондук тармактар, робототехника жана маалыматты талдоо боюнча жаңылыктар менен келечек кубаттуу болуп жатат.';
+                document.getElementById('tech-title').textContent = 'Келечекти түзгөн технологиялар';
+                document.getElementById('tech-text').textContent = 'Кванттык эсептөө, 5G, блокчейн жана башка жаңы технологиялар санариптик доорду түзүүдө.';
+                document.getElementById('interactive-title').textContent = 'ИИ жөнүндө көбүрөөк үйрөнүңүз';
+                document.getElementById('interactive-text').textContent = 'Жасалма интеллект денсаулықты сактоо, каржы жана башка тармактарда өзгөртүү алып келет. Бул автоматташтыруу жана жакшы чечимдерди кабыл алуу үчүн күчтүү курал.';
+                isKyrgyz = true;
+            }
+        }
+
+        function toggleAIText() {
+            var text = document.getElementById('interactive-text');
+            if (text.style.display === 'none') {
+                text.style.display = 'block';
+            } else {
+                text.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
